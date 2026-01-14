@@ -1,5 +1,5 @@
 name: ${project.name}
-author: ItsLewizzz
+author: FvxkYqnxXD
 version: ${project.version}
 description: ${project.description}
 website: ${project.url}
@@ -8,23 +8,23 @@ main: fun.lewisdev.deluxehub.DeluxeHubPlugin
 loadbefore: [Essentials]
 softdepend: [PlaceholderAPI, HeadDatabase, Multiverse-Core]
 permissions:
-  deluxehub.*:
-    description: Gives access to all DeluxeHub permissions
+  e4hub.*:
+    description: Da acceso a todos los permisos de e4Hub
     children:
-      deluxehub.command.*: true
-      deluxehub.bypass.*: true
-      deluxehub.alert.*: true
-      deluxehub.item.*: true
-      deluxehub.player.*: true
-      deluxehub.block.*: true
+      e4hub.command.*: true
+      e4hub.bypass.*: true
+      e4hub.alert.*: true
+      e4hub.item.*: true
+      e4hub.player.*: true
+      e4hub.block.*: true
   deluxehub.command.*:
-    description: Gives access to all command permissions
+    description: Da acceso a todos los comandos de e4Hub
     children:
-      deluxehub.command.help: true
-      deluxehub.command.reload: true
-      deluxehub.command.scoreboard: true
-      deluxehub.command.openmenu: true
-      deluxehub.command.holograms: true
+      e4hub.command.help: true
+      e4hub.command.reload: true
+      e4hub.command.scoreboard: true
+      e4hub.command.openmenu: true
+      e4hub.command.holograms: true
       deluxehub.command.gamemode: true
       deluxehub.command.gamemode.others: true
       deluxehub.command.clearchat: true
