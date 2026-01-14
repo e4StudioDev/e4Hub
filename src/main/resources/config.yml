@@ -1,15 +1,15 @@
-#    ____       __                __  __      __       _____
-#   / __ \___  / /_  ___  _____  / / / /_  __/ /_     |__  /
-#  / / / / _ \/ / / / / |/_/ _ \/ /_/ / / / / __ \     /_ <
-# / /_/ /  __/ / /_/ />  </  __/ __  / /_/ / /_/ /   ___/ /
-#/_____/\___/_/\__,_/_/|_|\___/_/ /_/\__,_/_.___/   /____/
-#
-# AUTHOR: Lewis D (ItsLewizzz)
-# WIKI: https://wiki.lewisdev.fun/free-resources/deluxehub
-# Copyright (c) Lewis D 2017-2022. All rights reserved.
+#        _  _   _   _ _   _ ____  
+#    ___| || | | | | | | | | __ ) 
+#   / _ \ || |_| |_| | | | |  _ \ 
+#  |  __/__   _|  _  | |_| | |_) |
+#   \___|  |_| |_| |_|\___/|____/ 
+#                                 
+# AUTHOR: Yanixan A. (FvxkYqnxXD)
+# WIKI: https://wiki.e4studio.dev/minecraft/e4hub
+# Copyright (c) Yanixan A. 2026. All rights reserved.
 #--------
-# CUSTOM MENUS
-#   You can add more menus to the "DeluxeHub/menus" directory,
+# MENUS CUSTOM
+#   You can add more menus on "e4Hub/menus" directory,
 #   copy and paste the default, server selector, menu and edit the file.
 #   Use the name of the file as the action ID.
 #--------
