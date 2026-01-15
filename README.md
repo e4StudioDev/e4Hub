@@ -11,7 +11,6 @@
     <a href="https://discord.e4studio.dev">Discord</a>
   
   [![Codacy Badge]([![Codacy Badge](https://app.codacy.com/project/badge/Grade/a66fd43d8f8c4039b394118226236c4f)](https://app.codacy.com/gh/e4StudioDev/e4Hub/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-  </p>
 
 [![Stargazers][stars-shield]][stars-url]
     [![Forks][forks-shield]][forks-url]
