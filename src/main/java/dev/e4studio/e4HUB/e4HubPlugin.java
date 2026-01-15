@@ -1,4 +1,4 @@
-package fun.lewisdev.deluxehub;
+package dev.e4studio.e4hub;
 
 import cl.bgmp.minecraft.util.commands.exceptions.CommandException;
 import cl.bgmp.minecraft.util.commands.exceptions.CommandPermissionsException;
@@ -47,65 +47,54 @@ public class DeluxeHubPlugin extends JavaPlugin {
         getLogger().log(Level.INFO, "| \\ |_ |  | | \\/ |_ |_| | | |_)   _)");
         getLogger().log(Level.INFO, "|_/ |_ |_ |_| /\\ |_ | | |_| |_)   _)");
         getLogger().log(Level.INFO, "");
-        getLogger().log(Level.INFO, "Version: " + getDescription().getVersion());
-        getLogger().log(Level.INFO, "Author: ItsLewizzz");
+        getLogger().log(Level.INFO, "V:" + getDescription().getVersion());
+        getLogger().log(Level.INFO, "Dev: FvxkYqnxXD");
         getLogger().log(Level.INFO, "");
 
         // Check if using Spigot
         try {
             Class.forName("org.spigotmc.SpigotConfig");
         } catch (ClassNotFoundException ex) {
-            getLogger().severe("============= SPIGOT NOT DETECTED =============");
-            getLogger().severe("DeluxeHub requires Spigot to run, you can download");
-            getLogger().severe("Spigot here: https://www.spigotmc.org/wiki/spigot-installation/.");
-            getLogger().severe("The plugin will now disable.");
-            getLogger().severe("============= SPIGOT NOT DETECTED =============");
+            getLogger().severe("============= SPIGOT NO DETECTADO =============");
+            getLogger().severe("e4HUB Requiere SpigotMC para funcionar correctamente.");
+            getLogger().severe("Spigot: https://www.spigotmc.org/wiki/spigot-installation/.");
+            getLogger().severe("El plugin se deshabilitara.");
+            getLogger().severe("============= SPIGOT NO DETECTADO =============");
             getPluginLoader().disablePlugin(this);
             return;
         }
 
         MinecraftVersion.disableUpdateCheck();
 
-        // Enable bStats metrics
         new MetricsLite(this, BSTATS_ID);
 
-        // Check plugin hooks
         hooksManager = new HooksManager(this);
 
-        // Load config files
         configManager = new ConfigManager();
         configManager.loadFiles(this);
 
-        // If there were any configuration errors we should not continue
         if (!getServer().getPluginManager().isPluginEnabled(this)) return;
 
-        // Command manager
         commandManager = new CommandManager(this);
         commandManager.reload();
 
-        // Cooldown manager
         cooldownManager = new CooldownManager();
 
-        // Inventory (GUI) manager
         inventoryManager = new InventoryManager();
         if (!hooksManager.isHookEnabled("HEAD_DATABASE")) inventoryManager.onEnable(this);
 
-        // Core plugin modules
         moduleManager = new ModuleManager();
         moduleManager.loadModules(this);
 
-        // Action system
         actionManager = new ActionManager(this);
 
-        // Load update checker (if enabled)
         if (getConfigManager().getFile(ConfigType.SETTINGS).getConfig().getBoolean("update-check"))
             new UpdateChecker(this).checkForUpdate();
 
-        // Register BungeeCord channels
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         getLogger().log(Level.INFO, "");
-        getLogger().log(Level.INFO, "Successfully loaded in " + (System.currentTimeMillis() - start) + "ms");
+        getLogger().log(Level.INFO, "Cargado correctamente en" + (System.currentTimeMillis() - start) + "ms");
     }
 
     public void onDisable() {
@@ -139,7 +128,6 @@ public class DeluxeHubPlugin extends JavaPlugin {
         } catch (MissingNestedCommandException e) {
             sender.sendMessage(ChatColor.RED + e.getUsage());
         } catch (CommandUsageException e) {
-            //sender.sendMessage(ChatColor.RED + e.getMessage());
             sender.sendMessage(ChatColor.RED + "Usage: " + e.getUsage());
         } catch (WrappedCommandException e) {
             if (e.getCause() instanceof NumberFormatException) {
