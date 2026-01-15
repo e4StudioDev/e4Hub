@@ -10,7 +10,7 @@
     ·
     <a href="https://discord.e4studio.dev">Discord</a>
   
-  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0daefdcd09d14086b2f96934d283371e)](https://www.codacy.com/manual/e4StudioDev/e4Hub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=e4StudioDev/e4Hub&amp;utm_campaign=Badge_Grade)
+  [![Codacy Badge]([![Codacy Badge](https://app.codacy.com/project/badge/Grade/a66fd43d8f8c4039b394118226236c4f)](https://app.codacy.com/gh/e4StudioDev/e4Hub/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
   </p>
 
 [![Stargazers][stars-shield]][stars-url]
